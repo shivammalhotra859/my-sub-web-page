@@ -12,6 +12,13 @@
 </script>
 </head>
 <body>
-    <div>Namste react</div>
-</body>
+    <h2>Doing some task...</h2>
+    <button onclick="finishTask()">Complete Task</button>
+
+    <script>
+      function finishTask() {
+        // Send message to parent window
+        window.parent.postMessage("iframe-task-complete", "*");
+      }
+    </script>
 </html>
